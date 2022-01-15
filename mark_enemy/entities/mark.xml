@@ -1,0 +1,38 @@
+<Entity  name= "mod_mark_on_enemy">
+    <InheritTransformComponent>
+    </InheritTransformComponent>
+    <SpriteComponent
+            _enabled="1"
+            alpha="1"
+            image_file="data/projectiles_gfx/target.xml"
+            next_rect_animation=""
+            offset_x="0"
+            offset_y="0"
+            rect_animation="fireball"
+            additive="1"
+            emissive="1"
+    >
+    </SpriteComponent>
+
+    <InteractableComponent
+            _tags="mark_delete"
+            _enabled ="0"
+            radius="300"
+            ui_text="$interact_mark_delete"
+            name="mark_interact"
+    >
+    </InteractableComponent>
+
+    <LuaComponent
+            _enabled="1"
+            script_source_file="mods/mark_enemy/scripts/mark.lua"
+            execute_every_n_frame="30"
+    >
+    </LuaComponent>
+
+    <LuaComponent
+            script_interacting="mods/mark_enemy/scripts/mark.lua"
+    >
+    </LuaComponent>
+
+</Entity>
